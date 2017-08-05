@@ -1,0 +1,24 @@
+<html>
+	<head>
+		{% load bootstrap3 %}
+		{% bootstrap_css %}
+		<title>Login</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>发布会管理</h1>
+			<form method="post" action="/login_action/">
+				<div class="input-group">
+					<input name="username", type="text" placeholder="username" class="form-control"><br/>
+				</div>
+				<div class="input-group">
+					<input name="password", type="password" placeholder="password" class="form-control"><br/>
+				</div>
+				{{ error }} <br>
+				<button id="btn" class="btn btn-success" , type="submit">登录</button>
+
+				<!--{% csrf_token %}-->
+			</form>
+		</div>
+	</body>
+</html>
